@@ -16,7 +16,7 @@ const Hero = () => {
           alt="Doha Skyline"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-primary/70" />
       </div>
 
       {/* Floating Particles */}
@@ -37,17 +37,17 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-foreground mb-6 animate-fade-in tracking-wide">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 animate-fade-in tracking-wide">
           Welcome to a World of <span className="text-white font-normal">Distinction</span>
         </h1>
         <h2
-          className="text-3xl md:text-5xl lg:text-6xl font-light text-platinum mb-8 animate-fade-in-up"
+          className="text-2xl md:text-3xl lg:text-4xl font-light text-platinum mb-8 animate-fade-in-up"
           style={{ animationDelay: "0.3s", opacity: 0, animationFillMode: "forwards" }}
         >
           Introducing Dukhan Bank Prime
         </h2>
         <p
-          className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in-up leading-relaxed"
+          className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in-up leading-relaxed"
           style={{ animationDelay: "0.6s", opacity: 0, animationFillMode: "forwards" }}
         >
           An Elevated Experience

@@ -1,13 +1,16 @@
 import { Headset, Clock } from "lucide-react";
 import supportImg from "@/assets/support.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const SupportChannels = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section ref={ref} className="relative py-24 md:py-32 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Image Side */}
-          <div className="relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden group animate-slide-right">
+          <div className={`relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden group transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <img
               src={supportImg}
               alt="Support"
@@ -17,7 +20,7 @@ const SupportChannels = () => {
           </div>
 
           {/* Content Side */}
-          <div className="space-y-8 animate-slide-left">
+          <div className={`space-y-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <h2 className="text-4xl md:text-5xl font-light text-foreground">
               Dedicated Support <span className="text-gold">Channels</span>
             </h2>

@@ -1,15 +1,18 @@
 import { Wallet, Briefcase } from "lucide-react";
 import eligibilityImg from "@/assets/eligibility.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Eligibility = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-navy-dark">
+    <section ref={ref} className="relative py-24 md:py-32 overflow-hidden bg-navy-dark">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 animate-fade-in">
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">
             <span className="text-gold">Eligibility</span>
           </h2>
-          <p className="text-xl text-muted-foreground animate-fade-in-up">
+          <p className="text-xl text-muted-foreground">
             Membership in the Prime segment is extended to clients who meet one or more of the
             following:
           </p>
@@ -17,7 +20,7 @@ const Eligibility = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Deposits Option */}
-          <div className="group relative overflow-hidden rounded-3xl animate-scale-in">
+          <div className={`group relative overflow-hidden rounded-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             <img
               src={eligibilityImg}
               alt="Eligibility"
@@ -38,7 +41,7 @@ const Eligibility = () => {
           </div>
 
           {/* Salary Option */}
-          <div className="group relative overflow-hidden rounded-3xl animate-scale-in" style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}>
+          <div className={`group relative overflow-hidden rounded-3xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             <img
               src={eligibilityImg}
               alt="Eligibility"

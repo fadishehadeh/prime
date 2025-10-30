@@ -1,6 +1,7 @@
 import { Plane, Shield, Sparkles, ShoppingBag, Utensils, Smartphone } from "lucide-react";
 import visaCardImg from "@/assets/visa-card.jpg";
 import bgTexture from "@/assets/bg.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const benefits = [
   { icon: Plane, text: "Complimentary airport lounges access" },
@@ -12,8 +13,10 @@ const benefits = [
 ];
 
 const VisaInfinite = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-navy-dark">
+    <section ref={ref} className="relative py-24 md:py-32 overflow-hidden bg-navy-dark">
       {/* Background */}
       <div
         className="absolute inset-0 opacity-10"
@@ -24,18 +27,18 @@ const VisaInfinite = () => {
       />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 animate-fade-in">
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">
             Visa Infinite <span className="text-gold">Credit Card</span>
           </h2>
-          <p className="text-xl text-muted-foreground animate-fade-in-up">
+          <p className="text-xl text-muted-foreground">
             Unlock premium global privileges with your Visa Infinite Card
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Card Display */}
-          <div className="relative h-[400px] flex items-center justify-center animate-scale-in">
+          <div className={`relative h-[400px] flex items-center justify-center transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             <div className="relative group">
               <img
                 src={visaCardImg}
@@ -51,8 +54,8 @@ const VisaInfinite = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 p-4 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50 hover:border-gold/50 transition-all duration-300 hover:translate-x-2 animate-slide-left"
-                style={{ animationDelay: `${index * 0.1}s`, opacity: 0, animationFillMode: "forwards" }}
+                className={`flex items-center gap-4 p-4 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50 hover:border-gold/50 transition-all duration-1000 hover:translate-x-2 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
                   <benefit.icon className="w-6 h-6 text-gold" />

@@ -8,6 +8,7 @@ import clubImg from "@/assets/club-2.jpg";
 import parkingImg from "@/assets/parking-2.jpg";
 import diningImg from "@/assets/dining-2.jpg";
 import bgTexture from "@/assets/bg.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const benefits = [
   {
@@ -44,6 +45,7 @@ const benefits = [
 
 const LifestyleBenefits = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { ref, isVisible } = useScrollAnimation();
 
   const next = () => {
     setCurrentIndex((prev) => (prev + 1) % benefits.length);
@@ -54,7 +56,7 @@ const LifestyleBenefits = () => {
   };
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section ref={ref} className="relative py-24 md:py-32 overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 opacity-10"
@@ -65,17 +67,17 @@ const LifestyleBenefits = () => {
       />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 animate-fade-in">
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">
             Dukhan <span className="text-gold">Lifestyle Benefits</span>
           </h2>
-          <p className="text-xl text-muted-foreground animate-fade-in-up">
+          <p className="text-xl text-muted-foreground">
             Enjoy exclusive lifestyle advantages designed to complement your status
           </p>
         </div>
 
         {/* Carousel */}
-        <div className="relative max-w-5xl mx-auto">
+        <div className={`relative max-w-5xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           <div className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden group">
             <img
               src={benefits[currentIndex].image}
