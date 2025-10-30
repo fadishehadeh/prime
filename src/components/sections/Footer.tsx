@@ -3,7 +3,7 @@ import whiteLogo from "@/assets/whitelogo.png";
 
 const Footer = () => {
   return (
-    <footer className="relative py-16 overflow-hidden bg-navy-dark border-t border-gold/20">
+    <footer id="contact" className="relative py-16 overflow-hidden bg-navy-dark border-t border-gold/20">
       {/* Background */}
       <div
         className="absolute inset-0 opacity-10"

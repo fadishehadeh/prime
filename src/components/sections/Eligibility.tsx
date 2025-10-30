@@ -6,7 +6,7 @@ const Eligibility = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 overflow-hidden bg-navy-dark">
+    <section id="eligibility" ref={ref} className="relative py-24 md:py-32 overflow-hidden bg-navy-dark">
       <div className="container mx-auto px-6">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">

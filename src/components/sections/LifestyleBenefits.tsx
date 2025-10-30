@@ -56,7 +56,7 @@ const LifestyleBenefits = () => {
   };
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 overflow-hidden">
+    <section id="benefits" ref={ref} className="relative py-24 md:py-32 overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 opacity-10"

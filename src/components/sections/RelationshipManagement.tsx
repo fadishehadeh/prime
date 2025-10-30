@@ -30,7 +30,7 @@ const RelationshipManagement = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 overflow-hidden">
+    <section id="services" ref={ref} className="relative py-24 md:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <img
