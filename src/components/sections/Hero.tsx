@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-doha.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
           alt="Doha Skyline"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-primary/85 to-primary/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
       </div>
 
       {/* Floating Particles */}
@@ -38,7 +38,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-foreground mb-6 animate-fade-in tracking-wide">
-          Welcome to a World of <span className="text-gold font-normal">Distinction</span>
+          Welcome to a World of <span className="text-white font-normal">Distinction</span>
         </h1>
         <h2
           className="text-3xl md:text-5xl lg:text-6xl font-light text-platinum mb-8 animate-fade-in-up"
