@@ -10,7 +10,7 @@ const Discovery = () => {
     <section id="discovery" ref={ref} className="relative py-32 md:py-40 overflow-hidden">
       {/* Background */}
       <div
-        className="absolute inset-0 opacity-50"
+        className="absolute inset-0"
         style={{
           backgroundImage: `url(${bgTexture})`,
           backgroundSize: "cover",

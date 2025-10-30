@@ -59,7 +59,7 @@ const LifestyleBenefits = () => {
     <section id="benefits" ref={ref} className="relative py-24 md:py-32 overflow-hidden">
       {/* Background */}
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0"
         style={{
           backgroundImage: `url(${bgTexture})`,
           backgroundSize: "cover",

@@ -6,7 +6,7 @@ const Footer = () => {
     <footer id="contact" className="relative py-16 overflow-hidden bg-navy-dark border-t border-gold/20">
       {/* Background */}
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0"
         style={{
           backgroundImage: `url(${bgTexture})`,
           backgroundSize: "cover",
