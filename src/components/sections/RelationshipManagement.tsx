@@ -40,7 +40,7 @@ const RelationshipManagement = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/95 to-primary/90" />
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-40"
           style={{
             backgroundImage: `url(${bgTexture})`,
             backgroundSize: "cover",
