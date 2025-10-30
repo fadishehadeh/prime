@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import valetImg from "@/assets/valet.jpg";
-import gymImg from "@/assets/gym.jpg";
-import cinemaImg from "@/assets/cinema.jpg";
-import clubImg from "@/assets/club.jpg";
-import parkingImg from "@/assets/parking.jpg";
-import diningImg from "@/assets/dining.jpg";
+import valetImg from "@/assets/valet-2.jpg";
+import gymImg from "@/assets/gym-2.jpg";
+import cinemaImg from "@/assets/cinema-2.jpg";
+import clubImg from "@/assets/club-2.jpg";
+import parkingImg from "@/assets/parking-2.jpg";
+import diningImg from "@/assets/dining-2.jpg";
 import bgTexture from "@/assets/bg.png";
 
 const benefits = [

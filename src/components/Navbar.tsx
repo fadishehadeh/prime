@@ -23,7 +23,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <img src={primeLogo} alt="Prime Banking" className="h-12 md:h-16" />
+        <img src={primeLogo} alt="Prime Banking" className="h-12 md:h-16 brightness-0 invert" />
         <img src={whiteLogo} alt="Dukhan Bank" className="h-10 md:h-12" />
       </div>
     </nav>
